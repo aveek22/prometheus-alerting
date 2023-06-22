@@ -1,0 +1,9 @@
+[tool.poetry]
+name = "prometheus-alerting"
+version = "0.0.1"
+description = "prometheus-alerting"
+authors = ["Aveek Das"]
+
+[tool.poetry.dependencies]
+python = "~3.9"
+prometheus-client = "0.17.0"

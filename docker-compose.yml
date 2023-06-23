@@ -15,11 +15,14 @@ services:
     volumes:
       - ./prometheus:/etc/prometheus
       - ./prometheus-data:/prometheus
-
+    container_name: prometheus
   grafana:
     image: "grafana/grafana:10.0.0"
     ports:
       - "3000:3000"
+    volumes:
+      - ./grafana-data:/var/lib/grafana
+    container_name: grafana
 
 volumes:
   prometheus-data:

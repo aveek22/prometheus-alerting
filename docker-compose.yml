@@ -1,11 +1,13 @@
 version: "2"
 
 services:
+
   app:
     build: .
     ports:
       - "8000:8000"
     container_name: app
+
   prometheus:
     image: "prom/prometheus:v2.44.0"
     ports:
@@ -16,6 +18,7 @@ services:
       - ./prometheus:/etc/prometheus
       - ./data/prometheus:/prometheus
     container_name: prometheus
+
   grafana:
     image: "grafana/grafana:10.0.0"
     ports:
@@ -23,6 +26,7 @@ services:
     volumes:
       - ./data/grafana:/var/lib/grafana
     container_name: grafana
+
   alert-manager:
     image: "prom/alertmanager:main"
     ports:

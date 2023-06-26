@@ -14,15 +14,23 @@ services:
       - "host.docker.internal:host-gateway"
     volumes:
       - ./prometheus:/etc/prometheus
-      - ./prometheus-data:/prometheus
+      - ./data/prometheus:/prometheus
     container_name: prometheus
   grafana:
     image: "grafana/grafana:10.0.0"
     ports:
       - "3000:3000"
     volumes:
-      - ./grafana-data:/var/lib/grafana
+      - ./data/grafana:/var/lib/grafana
     container_name: grafana
+  alert-manager:
+    image: "prom/alertmanager:main"
+    ports:
+      - "9093:9093"
+    container_name: alertmanager
+    volumes:
+      - ./alertmanager:/etc/alertmanager
+      - ./data/alertmanager:/alertmanager
 
 volumes:
   prometheus-data:

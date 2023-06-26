@@ -1,0 +1,11 @@
+groups:
+  - name: alert_rules
+    rules:
+      - alert: Count_8_above_50
+        expr: count_8_total >= 50
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Count 8 occured more than 50 times"
+          description: "Count 8 occured more than 50 times in the last 1 minute."

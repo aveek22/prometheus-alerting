@@ -1,0 +1,50 @@
+{
+  "partitions": [
+    {
+      "topic": "ps.profile-service.dmoi-consolidated.single.public.json.v1",
+      "partition": 0,
+      "offset": -1
+    },
+    {
+      "topic": "ps.profile-service.dmoi-consolidated.single.public.json.v1",
+      "partition": 1,
+      "offset": -1
+    },
+    {
+      "topic": "ps.profile-service.dmoi-consolidated.single.public.json.v1",
+      "partition": 2,
+      "offset": -1
+    },
+    {
+      "topic": "ps.profile-service.dmoi-consolidated.single.public.json.v1",
+      "partition": 3,
+      "offset": -1
+    },
+    {
+      "topic": "ps.profile-service.dmoi-consolidated.single.public.json.v1",
+      "partition": 4,
+      "offset": -1
+    },
+    {
+      "topic": "ps.profile-service.dmoi-consolidated.single.public.json.v1",
+      "partition": 5,
+      "offset": -1
+    },
+    {
+      "topic": "ps.profile-service.dmoi-consolidated.single.public.json.v1",
+      "partition": 6,
+      "offset": -1
+    },
+    {
+      "topic": "ps.profile-service.dmoi-consolidated.single.public.json.v1",
+      "partition": 7,
+      "offset": -1
+    },
+    {
+      "topic": "ps.profile-service.dmoi-consolidated.single.public.json.v1",
+      "partition": 8,
+      "offset": -1
+    }
+  ],
+  "version": 1
+}

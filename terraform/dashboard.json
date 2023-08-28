@@ -23,9 +23,20 @@
   "liveNow": false,
   "panels": [
     {
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "title": "Row title",
+      "type": "row"
+    },
+    {
       "datasource": {
         "type": "prometheus",
-        "uid": "a36ab7f6-c28b-4f59-a5c3-564142b57096"
+        "uid": "dd59755f-aa6d-4178-98c8-f5bf90bdbbaf"
       },
       "fieldConfig": {
         "defaults": {
@@ -83,7 +94,7 @@
         "h": 16,
         "w": 14,
         "x": 0,
-        "y": 0
+        "y": 1
       },
       "id": 1,
       "options": {
@@ -102,7 +113,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "a36ab7f6-c28b-4f59-a5c3-564142b57096"
+            "uid": "dd59755f-aa6d-4178-98c8-f5bf90bdbbaf"
           },
           "editorMode": "builder",
           "expr": "count_8_total",
@@ -111,8 +122,74 @@
           "refId": "A"
         }
       ],
-      "title": "Count of 8",
+      "title": "Panel Title",
       "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "dd59755f-aa6d-4178-98c8-f5bf90bdbbaf"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "Requests",
+          "mappings": [],
+          "max": 10,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 8
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 5,
+        "x": 14,
+        "y": 1
+      },
+      "id": 3,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "10.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "dd59755f-aa6d-4178-98c8-f5bf90bdbbaf"
+          },
+          "editorMode": "builder",
+          "expr": "requests",
+          "instant": false,
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Requests",
+      "type": "gauge"
     }
   ],
   "refresh": "",
@@ -123,13 +200,17 @@
     "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-5m",
     "to": "now"
   },
-  "timepicker": {},
+  "timepicker": {
+    "refresh_intervals": [
+      "5s"
+    ]
+  },
   "timezone": "",
-  "title": "Metrics Monitoring",
-  "uid": "d9d7f29f-3bf5-4635-8ef4-96b55c3f49f4",
-  "version": 2,
+  "title": "Count 8 Metrics",
+  "uid": "d0bbe86e-5496-4d6d-ad60-7df90cff3704",
+  "version": 3,
   "weekStart": ""
 }

@@ -3,7 +3,7 @@ version: "2"
 services:
 
   app:
-    build: .
+    image: prometheus-alerting-app:1.0.0
     ports:
       - "8000:8000"
     container_name: app
